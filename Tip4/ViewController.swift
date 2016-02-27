@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     
     
-     
+    
     
     
     
@@ -41,17 +41,17 @@ class ViewController: UIViewController {
         
         print(splitPercentageDf)
         
-       
-    
         
-            totalTip.text = "0.00"
-            totalSplit.text = "\(splitDf)"
         
-            tipPercentage.text = "\(tipPercentageDf) %"
-            splitPercentage.text = "\(splitPercentageDf) %"
         
-            labelTotalPay.text = "TOTAL: 0.00"
-            totalForPerson.text = "0.00"
+        totalTip.text = "0.00"
+        totalSplit.text = "\(splitDf)"
+        
+        tipPercentage.text = "\(tipPercentageDf) %"
+        splitPercentage.text = "\(splitPercentageDf) %"
+        
+        labelTotalPay.text = "TOTAL: 0.00"
+        totalForPerson.text = "0.00"
         
         
         
@@ -77,12 +77,12 @@ class ViewController: UIViewController {
         print("view did disappear")
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func onEditChanged(sender: AnyObject) {
         
         
@@ -108,15 +108,15 @@ class ViewController: UIViewController {
         tipPercentage.text = String(format: "%.f %%", tipControlValue )
         splitPercentage.text = String(format: "%.0f %%", 1/vTotalPerson*100)
         
-        labelTotalPay.text = "\(vTotalPay)"
-        totalForPerson.text = "\(vTotalForPerson)"
+        labelTotalPay.text =  String(format: "TOTAL: %.2f", vTotalPay )
+        totalForPerson.text = String(format: "%.2f", vTotalForPerson )
         
         
         
         
     }
     
-
+    
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }
